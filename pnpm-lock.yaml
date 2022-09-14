@@ -1,0 +1,120 @@
+lockfileVersion: '6.0'
+
+settings:
+  autoInstallPeers: true
+  excludeLinksFromLockfile: false
+
+importers:
+
+  .:
+    dependencies:
+      '@bazel/buildozer':
+        specifier: ^5.1.0
+        version: 5.1.0
+      '@bazel/typescript':
+        specifier: ^5.5.4
+        version: 5.8.1(typescript@4.9.5)
+      '@types/lodash':
+        specifier: ^4.14.185
+        version: 4.14.196
+      '@types/node':
+        specifier: ^18.7.18
+        version: 18.17.3
+      '@x/lib-a':
+        specifier: workspace:*
+        version: link:lib/lib-a
+      lodash:
+        specifier: ^4.17.21
+        version: 4.17.21
+      typescript:
+        specifier: ^4.8.3
+        version: 4.9.5
+
+  app/app-a: {}
+
+  lib/lib-a: {}
+
+packages:
+
+  /@bazel/buildozer@5.1.0:
+    resolution: {integrity: sha512-207j8a4872L2mJLSRnatH3m8ll0YYwlUdCd89LVy4IwTZuaa/i8QJWNZoNmfRNvq6nMbCFpyM7ci/FxA2DUUNA==}
+    hasBin: true
+    dev: false
+
+  /@bazel/typescript@5.8.1(typescript@4.9.5):
+    resolution: {integrity: sha512-NAJ8WQHZL1WE1YmRoCrq/1hhG15Mvy/viWh6TkvFnBeEhNUiQUsA5GYyhU1ztnBIYW03nATO3vwhAEfO7Q0U5g==}
+    deprecated: No longer maintained, https://github.com/aspect-build/rules_ts is the recommended replacement
+    hasBin: true
+    requiresBuild: true
+    peerDependencies:
+      typescript: '>=3.0.0'
+    dependencies:
+      '@bazel/worker': 5.8.1
+      semver: 5.6.0
+      source-map-support: 0.5.9
+      tsutils: 3.21.0(typescript@4.9.5)
+      typescript: 4.9.5
+    dev: false
+
+  /@bazel/worker@5.8.1:
+    resolution: {integrity: sha512-GMyZSNW3F34f9GjbJqvs1aHyed5BNrNeiDzNJhC1fIizo/UeBM21oBBONIYLBDoBtq936U85VyPZ76JaP/83hw==}
+    dependencies:
+      google-protobuf: 3.21.2
+    dev: false
+
+  /@types/lodash@4.14.196:
+    resolution: {integrity: sha512-22y3o88f4a94mKljsZcanlNWPzO0uBsBdzLAngf2tp533LzZcQzb6+eZPJ+vCTt+bqF2XnvT9gejTLsAcJAJyQ==}
+    dev: false
+
+  /@types/node@18.17.3:
+    resolution: {integrity: sha512-2x8HWtFk0S99zqVQABU9wTpr8wPoaDHZUcAkoTKH+nL7kPv3WUI9cRi/Kk5Mz4xdqXSqTkKP7IWNoQQYCnDsTA==}
+    dev: false
+
+  /buffer-from@1.1.2:
+    resolution: {integrity: sha512-E+XQCRwSbaaiChtv6k6Dwgc+bx+Bs6vuKJHHl5kox/BaKbhiXzqQOwK4cO22yElGp2OCmjwVhT3HmxgyPGnJfQ==}
+    dev: false
+
+  /google-protobuf@3.21.2:
+    resolution: {integrity: sha512-3MSOYFO5U9mPGikIYCzK0SaThypfGgS6bHqrUGXG3DPHCrb+txNqeEcns1W0lkGfk0rCyNXm7xB9rMxnCiZOoA==}
+    dev: false
+
+  /lodash@4.17.21:
+    resolution: {integrity: sha512-v2kDEe57lecTulaDIuNTPy3Ry4gLGJ6Z1O3vE1krgXZNrsQ+LFTGHVxVjcXPs17LhbZVGedAJv8XZ1tvj5FvSg==}
+    dev: false
+
+  /semver@5.6.0:
+    resolution: {integrity: sha512-RS9R6R35NYgQn++fkDWaOmqGoj4Ek9gGs+DPxNUZKuwE183xjJroKvyo1IzVFeXvUrvmALy6FWD5xrdJT25gMg==}
+    hasBin: true
+    dev: false
+
+  /source-map-support@0.5.9:
+    resolution: {integrity: sha512-gR6Rw4MvUlYy83vP0vxoVNzM6t8MUXqNuRsuBmBHQDu1Fh6X015FrLdgoDKcNdkwGubozq0P4N0Q37UyFVr1EA==}
+    dependencies:
+      buffer-from: 1.1.2
+      source-map: 0.6.1
+    dev: false
+
+  /source-map@0.6.1:
+    resolution: {integrity: sha512-UjgapumWlbMhkBgzT7Ykc5YXUT46F0iKu8SGXq0bcwP5dz/h0Plj6enJqjz1Zbq2l5WaqYnrVbwWOWMyF3F47g==}
+    engines: {node: '>=0.10.0'}
+    dev: false
+
+  /tslib@1.14.1:
+    resolution: {integrity: sha512-Xni35NKzjgMrwevysHTCArtLDpPvye8zV/0E4EyYn43P7/7qvQwPh9BGkHewbMulVntbigmcT7rdX3BNo9wRJg==}
+    dev: false
+
+  /tsutils@3.21.0(typescript@4.9.5):
+    resolution: {integrity: sha512-mHKK3iUXL+3UF6xL5k0PEhKRUBKPBCv/+RkEOpjRWxxx27KKRBmmA60A9pgOUvMi8GKhRMPEmjBRPzs2W7O1OA==}
+    engines: {node: '>= 6'}
+    peerDependencies:
+      typescript: '>=2.8.0 || >= 3.2.0-dev || >= 3.3.0-dev || >= 3.4.0-dev || >= 3.5.0-dev || >= 3.6.0-dev || >= 3.6.0-beta || >= 3.7.0-dev || >= 3.7.0-beta'
+    dependencies:
+      tslib: 1.14.1
+      typescript: 4.9.5
+    dev: false
+
+  /typescript@4.9.5:
+    resolution: {integrity: sha512-1FXk9E2Hm+QzZQ7z+McJiHL4NW1F2EzMu9Nq9i3zAaGqibafqYwCVU6WyWAuyQRRzOlxou8xZSyXLEN8oKj24g==}
+    engines: {node: '>=4.2.0'}
+    hasBin: true
+    dev: false

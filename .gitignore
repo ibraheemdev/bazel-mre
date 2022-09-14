@@ -1,0 +1,10 @@
+build/
+/bazel-*
+.vscode
+.idea/
+*.iml
+.ijwb
+.DS_Store
+node_modules
+user.bazelrc
+yarn-error.log

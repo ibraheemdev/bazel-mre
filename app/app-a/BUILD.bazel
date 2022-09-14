@@ -1,0 +1,30 @@
+load("@aspect_rules_ts//ts:defs.bzl", "ts_project", "ts_config")
+load("@aspect_rules_js//npm:defs.bzl", "npm_package")
+load("@aspect_rules_js//js:defs.bzl", "js_library", "js_binary", "js_run_binary")
+
+ts_project(
+    name = "app.lib",
+    tsconfig = "//:tsconfig",
+    declaration = True,
+    deps = [
+        "//:node_modules/@x/lib-a",
+    ],
+    visibility = ["//visibility:public"],
+)
+
+js_binary(
+    name = "app-a",
+    entry_point = "index.js",
+    data = [
+        ":app.lib",
+        "//:node_modules/@x/lib-a",
+    ],
+    visibility = ["//visibility:public"],
+)
+
+js_run_binary(
+    name = "a",
+    outs = ["dummy"],
+    args = [],
+    tool = ":app-a",
+)

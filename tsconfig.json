@@ -1,0 +1,20 @@
+{
+  "compilerOptions": {
+    "baseUrl": ".",
+    "declaration": true,
+    "esModuleInterop": true,
+    "forceConsistentCasingInFileNames": true,
+    "module": "CommonJS",
+    "moduleResolution": "Node",
+    "noImplicitReturns": true,
+    "strict": true,
+    "noUnusedLocals": true,
+    "skipLibCheck": true,
+    "lib": ["es2018", "dom", "esnext"],
+    "target": "ES2018",
+    "rootDirs": [
+      "."
+    ]
+  },
+  "exclude": ["bazel-out", "dist"]
+}

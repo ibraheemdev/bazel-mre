@@ -1,0 +1,33 @@
+load("@aspect_rules_ts//ts:defs.bzl", "ts_project", "ts_config")
+load("@aspect_rules_js//npm:defs.bzl", "npm_package")
+load("@aspect_rules_js//js:defs.bzl", "js_library", "js_binary")
+load("@npm//:defs.bzl", "npm_link_all_packages")
+
+npm_link_all_packages(name = "node_modules")
+
+npm_package(
+    name = "lib-a",
+    srcs = [
+        "package.json",
+        ":dist",
+    ],
+    package = "@x/lib-a",
+    visibility = ["//visibility:public"],
+)
+
+ts_project(
+    name = "dist-ts",
+    tsconfig = "//:tsconfig",
+    declaration = True,
+    deps = [
+        "//:node_modules/@types/lodash",
+        "//:node_modules/lodash",
+    ],
+    visibility = ["//visibility:public"],
+)
+
+js_library(
+    name = "dist",
+    srcs = [":dist-ts", "package.json"],
+    visibility = ["//visibility:public"],
+)
